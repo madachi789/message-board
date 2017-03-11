@@ -1,11 +1,5 @@
 <h1>メッセージ一覧</h1>
 
-<% @messages.each do |message| %>
-  名前:<%= message.name %>
-  内容:<%= message.body %>
-  <br>
-<% end %>
-
 <div class="panel panel-default">
   <div class="panel-heading">
     メッセージ一覧
@@ -22,9 +16,11 @@
 
 <%= form_for(@message) do |f| %>
   名前:
-  <%= f.text_field :name %>
+   <%#= f.text_field :name %>
+ 　<%= f.text_area :name, class: "name-input", size: "30x10" %>
 
   内容:
-  <%= f.text_field :body %>
+  <%#= f.text_field :body %>
+　<%= f.text_area :body, class: "body-input", size: "30x10" %>
   <%= f.submit class: "btn btn-sm btn-primary" %>
 <% end %>
