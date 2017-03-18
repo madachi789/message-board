@@ -1,4 +1,5 @@
 <%= form_for(@message) do |f| %>
+
   <% if @message.errors.present? %>
     <div class="alert alert-danger">
       <%= alert %>
@@ -30,4 +31,5 @@
   <div class="form-group">
     <%= f.submit class: "btn btn-lg btn-primary" %>
 　</div>
+
 <% end %>
